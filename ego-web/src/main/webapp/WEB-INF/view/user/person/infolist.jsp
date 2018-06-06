@@ -72,7 +72,7 @@ $(function(){
 	$("#user-oldLoginPwd").blur(function(){
 		var userloginname=$("#userloginname").text();
 		var userloginpwd=$("#user-oldLoginPwd").val().trim();
-		var url="/ego_web/member/getUserByLoginName";
+		var url="/EGO_web/member/getUserByLoginName";
 		$.post(url,{"loginname":userloginname,"loginpwd":userloginpwd},function(data){
 			if(data==0){
 				$("#user-newLoginPwd1").removeAttr("readonly");
@@ -106,7 +106,7 @@ $(function(){
 	/* $("#user-phone").on({blur:function(){
 			var phone=$("#user-phone").val().trim();
 			if(phone!=){
-				var url="/ego_web/member/checkLoginPhone?phone="+ phone;
+				var url="/EGO_web/member/checkLoginPhone?phone="+ phone;
 				$.post(url,function(data){
 					if(data==1){
 						$("#userphonesmall").empty();
@@ -300,13 +300,13 @@ $(function(){
 				<a rel="nofollow" target="_blank" href="//zhaopin.jd.com/"> 人才招聘 </a> | 
 				<a rel="nofollow" target="_blank" href="//www.jd.com/contact/joinin.aspx"> 商家入驻 </a> | 
 				<a rel="nofollow" target="_blank" href="//www.jd.com/intro/service.aspx"> 广告服务 </a> | 
-				<a rel="nofollow" target="_blank" href="//app.jd.com/"> 手机ego </a> | 
+				<a rel="nofollow" target="_blank" href="//app.jd.com/"> 手机EGO </a> | 
 				<a target="_blank" href="/links.vm/club.jd.com/links.aspx"> 友情链接 </a> | 
 				<a target="_blank" href="//media.jd.com/"> 销售联盟 </a> | 
-				<a href="//club.jd.com/" target="_blank"> ego社区 </a>
+				<a href="//club.jd.com/" target="_blank"> EGO社区 </a>
 			</div>
 			<div class="copyright">
-				Copyright &copy; 2004-2017 ego 版权所有
+				Copyright &copy; 2004-2017 EGO 版权所有
 			</div>
 		</div>
 		</div>

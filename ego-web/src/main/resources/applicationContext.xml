@@ -27,6 +27,11 @@
 	<import resource="classpath:dubbo-web.xml" />
 	<!-- Spring自带的任务调度注解    定时器开关-->
 	<task:annotation-driven />
+	
+	<!-- 声明组件   -->
+	<bean id="uploadPath" class="com.ego.utils.UploadPath">
+		<property name="uploadPath" value="${uploadPath}" />
+	</bean>
 
 	
 </beans>

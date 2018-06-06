@@ -12,7 +12,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     
-    <title>ego</title>
+    <title>EGO</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -47,7 +47,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			
 			<div id="header">
 			<div id="logo">
-				<img alt="ego商城" src="${resources}/img/main/egologo.png">
+				<img alt="EGO商城" src="${resources}/img/main/EGOlogo.png">
 			</div>
 			<form action="${root}/member/search"  method="post">
 				<div id="search-form">    
@@ -286,7 +286,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<div id="user-info">
 					<div id="user">
 						<br />
-							Hi,欢迎<span id=""></span>来到ego商城<br /><br />
+							Hi,欢迎<span id=""></span>来到EGO商城<br /><br />
 							<a href="${root}/member/outlogin"><button class="but2">切换账号</button><br /></a>
 							<a href="${root}/member/outlogin"><button class="but2">退出登录</button><br /></a>
 					</div>
@@ -336,7 +336,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<div id="miaosha-title">
 						<img src="${resources}/img/main/miaosha.jpg"/>
 						<span id="miaosha-title-1">
-							ego秒杀
+							EGO秒杀
 						</span>
 						<span id="miaosha-title-2">
 							<div id="timer"></div>
@@ -685,7 +685,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<span>违法和不良信息举报电话：4006561155</span>
 			</p>
 			<p>   
-				<span>Copyright &copy; 2004 - 2017 ego版权所有&nbsp;|&nbsp;消费者维权热线：4006067733</span>
+				<span>Copyright &copy; 2004 - 2017 EGO版权所有&nbsp;|&nbsp;消费者维权热线：4006067733</span>
 				<a href="#">经营执照</a>
 			</p>
 		</div>

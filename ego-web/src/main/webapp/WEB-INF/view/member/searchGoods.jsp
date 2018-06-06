@@ -103,7 +103,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<input id="btn" type="button" value="搜索" onclick="souSuoClick()" />
 				</div>
 				<div id="cart">
-					<a href="${root}/account/myCart">我的购物车&nbsp;&nbsp;
+					<a href="${root}/user/cart/gomyCart">我的购物车&nbsp;&nbsp;
 					<img src="${resources}/img/vector/cart.png" width="20px" height="20px" /></a>
 				</div>
 			</div>
@@ -375,7 +375,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<span>违法和不良信息举报电话：4006561155</span>
 			</p>
 			<p>   
-				<span>Copyright &copy; 2004 - 2017  ego版权所有&nbsp;|&nbsp;消费者维权热线：4006067733</span>
+				<span>Copyright &copy; 2004 - 2017  EGO版权所有&nbsp;|&nbsp;消费者维权热线：4006067733</span>
 				<a href="#">经营执照</a>
 			</p>
 		</div>

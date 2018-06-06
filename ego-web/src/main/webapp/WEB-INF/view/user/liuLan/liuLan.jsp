@@ -101,17 +101,17 @@
 			<div class="footer">
 				<div class="footer-hd">
 					<p>
-						<a href="#">ego</a> <b>|</b> <a href="#">商城首页</a> <b>|</b> <a
+						<a href="#">EGO</a> <b>|</b> <a href="#">商城首页</a> <b>|</b> <a
 							href="#">支付宝</a> <b>|</b> <a href="#">物流</a>
 					</p>
 				</div>
 				<div class="footer-bd">
 					<p>
-						<a href="#">关于ego</a> <a href="#">合作伙伴</a> <a href="#">联系我们</a> <a
+						<a href="#">关于EGO</a> <a href="#">合作伙伴</a> <a href="#">联系我们</a> <a
 							href="#">网站地图</a> <em>© 2015-2025 <a
-							href="http://www.ego.com/" target="_blank" title="ego">ego之家</a>
-							- Collect from <a href="http://www.ego.com/" title="ego"
-							target="_blank">ego</a></em>
+							href="http://www.EGO.com/" target="_blank" title="EGO">EGO之家</a>
+							- Collect from <a href="http://www.EGO.com/" title="EGO"
+							target="_blank">EGO</a></em>
 					</p>
 				</div>
 

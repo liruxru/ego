@@ -201,7 +201,7 @@
 				<li class="spacer"></li>
 				<li class="fore3 dorpdown" id="ttbar-myjd">
 					<div class="dt cw-icon">
-						<a target="_blank" href="${root }/">我的ego</a><i
+						<a target="_blank" href="${root }/">我的EGO</a><i
 							class="iconfont">&#xe605;</i>
 					</div>
 					<div class="dd dorpdown-layer"></div>

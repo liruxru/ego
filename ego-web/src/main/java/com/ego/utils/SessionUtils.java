@@ -19,13 +19,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 * zhaoran
 */
 public class SessionUtils implements Serializable{
-	
+	@Resource(name="redisTemplate")
 	private RedisTemplate<String, Object> redisTemplate;
-	
-	
-	public RedisTemplate<String, Object> getRedisTemplate() {
-		return redisTemplate;
-	}
 
 	public void setRedisTemplate(RedisTemplate<String, Object> redisTemplate) {
 		this.redisTemplate = redisTemplate;

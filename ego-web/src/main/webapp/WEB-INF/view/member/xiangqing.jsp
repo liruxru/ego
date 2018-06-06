@@ -66,14 +66,15 @@
 			//提交搜索框
 			$(".button").click(function(){
 				var search=$("#search").val();
-				window.location.href="${root}/member/search?fullName="+search;
+				var url="${root}/member/search?fullName="+search;
+				window.location.href=url;
 			})
 			$(".button2").click(function(){
 				var search=$("#search").val();
 				var storename=$("#storeName").val();
 				window.location.href="${root}/member/search?storename="+storename+"&fullName="+search;
 			})
-			//ego头条
+			//EGO头条
 			$(document).ready(function(){
 				$('.list_lh li:even').addClass('lieven');
 			})
@@ -463,10 +464,10 @@
 			 		<input type="hidden" value="${goods._id}" id="goodsId"/>
 			 		<input type="hidden" value="${goods.store}" id="storeName"/>
 			</div>
-			<!--ego头条  -->
+			<!--EGO头条  -->
 			<div id="conRight">
 						<div class="bcon">
-						<h1><b>ego头条</b></h1>
+						<h1><b>EGO头条</b></h1>
 						<!-- 代码开始 -->
 						<div class="list_lh">
 							<ul>
@@ -677,7 +678,7 @@
 				<span>违法和不良信息举报电话：4006561155</span>
 			</p>
 			<p>   
-				<span>Copyright &copy; 2004 - 2017 ego.com 版权所有&nbsp;|&nbsp;消费者维权热线：4006067733</span>
+				<span>Copyright &copy; 2004 - 2017 EGO.com 版权所有&nbsp;|&nbsp;消费者维权热线：4006067733</span>
 				<a href="#">经营执照</a>
 			</p>
 		</div>

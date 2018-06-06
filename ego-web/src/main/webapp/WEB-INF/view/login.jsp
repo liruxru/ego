@@ -19,7 +19,7 @@
 <meta http-equiv="description" content="This is my page">
 <script type="text/javascript" src="${resources}/js/jquery.js"></script>
 <script type="text/javascript" src="${resources}/js/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="${resources}/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="${resources}/js/bootstrap.js"></script>
 <link rel="stylesheet" type="text/css" href="${resources}/css/userLogin.css">
 <style type="text/css">
 b {
@@ -68,10 +68,10 @@ b {
 			var	loginname=$("#loginname").val();
 			var loginpwd=$("#loginpwd").val();
 			if(loginname!="" && loginpwd!=""){
-				var url="/ego_web/member/login";
+				var url="/ego-web/member/login";
 				$.post(url,{"loginname":loginname,"loginpwd":loginpwd},function(data){
 					if(data.code==0){
-						window.location.href="/ego_web/member/home";
+						window.location.href="/ego-web/member/home";
 						return ;
 					}else if(data.code==1){
 						$("#spanerr2").empty();
@@ -79,7 +79,7 @@ b {
 						$("#spanerr1").append("&nbsp;&nbsp;&nbsp;登录名或密码错误！");
 						return ;      
 					}else if(data.code==2){
-						window.location.href="/ego_web/member/goXiangqing?id="+data.id;
+						window.location.href="/ego-web/member/goXiangqing?id="+data.id;
 						return ;
 					}
 				},'json');
@@ -96,10 +96,10 @@ b {
 			var yanzhengma=$("#yanzhengma").val();
 			if(phone!="" && yanzhengma!=""){
 // 				document.getElementById("but2").setAttribute("type", "submit");
-				var url="/ego_web/member/login";
+				var url="/ego-web/member/login";
 				$.post(url,{"phone":phone,"yanzhengma":yanzhengma},function(data){
 					if(data.code==0){
-						window.location.href="/ego_web/member/home";
+						window.location.href="/ego-web/member/home";
 						return ;
 					}else if(data.code==1){
 						$("#spanerr1").empty();
@@ -107,7 +107,7 @@ b {
 						$("#spanerr2").append("&nbsp;&nbsp;&nbsp;登录名或密码错误！");
 						return ;      
 					}else if(data.code==2){
-						window.location.href="/ego_web/member/goXiangqing?id="+data.id;
+						window.location.href="/ego-web/member/goXiangqing?id="+data.id;
 						return ;
 					}
 				},'json');
@@ -126,7 +126,7 @@ b {
 			if(regs1.test(value) || regs2.test(value)){
 				$("#spanerr2").empty();
 				$("#yanzheng").removeAttr("disabled"); 
-				var url="/ego_web/member/checkLoginPhone?phone="+ value;
+				var url="/ego-web/member/checkLoginPhone?phone="+ value;
 				$.post(url,function(data){
 					if(data==1){
 						$("#spanerr2").empty();
@@ -150,7 +150,7 @@ b {
 				var regs2 = /^1(7[0|6|7|8][0-9]{8})$/;
 				var value=$(this).val().trim();
 				if(regs1.test(value) || regs2.test(value)){
-					var url="/ego_web/member/checkLoginPhone?phone="+ value;
+					var url="/ego-web/member/checkLoginPhone?phone="+ value;
 					$.post(url,function(data){
 					if(data==1){
 						$("#spanerr2").empty();
@@ -185,8 +185,8 @@ b {
 			var request = new XMLHttpRequest();
 			var method = "POST";
 			phone=document.getElementById("phone").value;
-// 			var url = "/ego_web/member/userRegYanZheng?phone="+ phone;
-			var url = "/ego_web/member/userRegYanZheng";
+// 			var url = "/ego-web/member/userRegYanZheng?phone="+ phone;
+			var url = "/ego-web/member/userRegYanZheng";
 			$.post(url,{"phone":phone},function(data){
 				if(data==1){
 					$("#spanerr2").empty();
@@ -324,12 +324,12 @@ b {
 					href="//www.jd.com/contact/joinin.aspx"> 商家入驻 </a> | <a
 					rel="nofollow" target="_blank"
 					href="//www.jd.com/intro/service.aspx"> 广告服务 </a> | <a
-					rel="nofollow" target="_blank" href="//app.jd.com/"> 手机ego </a> | <a
+					rel="nofollow" target="_blank" href="//app.jd.com/"> 手机EGO </a> | <a
 					target="_blank" href="/links.vm/club.jd.com/links.aspx"> 友情链接 </a>
 				| <a target="_blank" href="//media.jd.com/"> 销售联盟 </a> | <a
-					href="//club.jd.com/" target="_blank"> ego社区 </a>
+					href="//club.jd.com/" target="_blank"> EGO社区 </a>
 			</div>
-			<div class="copyright">Copyright &copy; 2004-2017 ego 版权所有</div>
+			<div class="copyright">Copyright &copy; 2004-2017 EGO 版权所有</div>
 		</div>
 	</div>
 </body>

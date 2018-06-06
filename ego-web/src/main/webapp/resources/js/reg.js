@@ -11,7 +11,7 @@ jQuery(function(){
 		var request = new XMLHttpRequest();
 		var method = "POST";
 		phone=document.getElementById("userPhone").value;
-		var url = "/ego_web/member/userRegYanZheng?phone="+ phone;
+		var url = "/ego-web/member/userRegYanZheng?phone="+ phone;
 		request.open(method, url);
 		request.send(null);
 		request.onreadystatechange = function() {
@@ -169,7 +169,7 @@ jQuery(function(){
 			} else if (regs.userNameReg.test(value)) {
 				var request = new XMLHttpRequest();
 				var method = "POST";
-				var url = "/ego_web/member/checkLoginname?loginname="+ value;
+				var url = "/ego-web/member/checkLoginname?loginname="+ value;
 				request.open(method, url);
 				request.send(null);
 				request.onreadystatechange = function() {
@@ -428,7 +428,7 @@ jQuery(function(){
 			} else if (regs.mobileReg1.test(value) || regs.mobileReg2.test(value)) {
 				var request = new XMLHttpRequest();
 				var method = "POST";
-				var url = "/ego_web/member/checkLoginPhone?phone="+ value;
+				var url = "/ego-web/member/checkLoginPhone?phone="+ value;
 				request.open(method, url);
 				request.send(null);
 				request.onreadystatechange = function() {
@@ -496,7 +496,7 @@ jQuery(function(){
 			} else if (regs.userNameReg.test(value)) {
 				var request = new XMLHttpRequest();
 				var method = "POST";
-				var url = "/ego_web/member/userRegServlet?vCode="+ value;
+				var url = "/ego-web/member/userRegServlet?vCode="+ value;
 				request.open(method, url);
 				request.send(null);
 				request.onreadystatechange = function() {

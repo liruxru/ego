@@ -1,11 +1,6 @@
 package com.ego.utils;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
-
-@Component("uploadPath")
 public class UploadPath {
-	@Value(value="uploadPath")
 	private String uploadPath;
 
 	public String getUploadPath() {

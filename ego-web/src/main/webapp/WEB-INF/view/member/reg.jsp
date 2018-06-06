@@ -133,7 +133,41 @@
 							<i></i> <span></span>
 						</div>
 					</div>
-		
+					<%-- <!--验证码-->
+				<div class="register-box1 ">
+					<div class="box default">
+						<label for="vCode">验证码</label> 
+						<input type="text" name="vCode" id="vCode" placeholder="输入验证码" />							
+						<img  style="width:100px;height: 30px;text-align: center; " tilte="点击图片换一张"  src="${root }/CaptServlet"  onclick="this.src=this.src+'?'">
+					    <i></i>
+					</div>
+					<div class="tip">
+						<i></i> <span></span>
+					</div>
+				</div> --%>
+					<!--地址-->
+					<%-- <div class="register-box1 ">
+					<div class="box default">
+					<label>地址信息:</label>
+					<select id="sheng" style="margin-top: 20px" name="province" >
+				 			<option value="0">请选择省</option>
+				 			<c:forEach items="${listProvince}" var="she">
+				 				<option  value="${she.name}|${she.code}">${she.name}</option>
+				 			</c:forEach>
+				 	</select>
+				 	&nbsp;&nbsp;
+				   	<select id="shi" style="margin-top: 20px" name="city">
+				   		<option>请选择市</option>
+					</select>
+					&nbsp;&nbsp;
+				   	<select id="qu" style="margin-top: 20px" name="area">
+				   		<option>请选择区</option>
+				   	</select>
+				</div>
+					<div class="tip">
+						<i></i> <span></span>
+					</div> 
+				</div> --%>
 
 					<!--注册协议-->
 					<div class="register-box1 xieyi">
@@ -141,7 +175,7 @@
 						<div class="box default">
 							<input type="checkbox" id="ck" /> <span>我已阅读并同意 <a
 								href="javascript:void(0)" data-toggle="modal"
-								data-target="#myModal">《ego用户注册协议》</a>
+								data-target="#myModal">《EGO用户注册协议》</a>
 							</span>
 						</div>
 						<!--提示信息-->
@@ -164,7 +198,7 @@
 							<button type="button" class="close" data-dismiss="modal"
 								aria-hidden="true">&times;</button>
 							<h2 class="modal-title" id="myModalLabel"
-								style="text-align: center;">《ego用户注册协议》</h2>
+								style="text-align: center;">《EGO用户注册协议》</h2>
 						</div>
 						<div class="modal-body"
 							style="width: 1000px; position: relative; float: left;">
@@ -216,13 +250,13 @@
 					href="//www.jd.com/contact/joinin.aspx"> 商家入驻 </a> | <a
 					rel="nofollow" target="_blank"
 					href="//www.jd.com/intro/service.aspx"> 广告服务 </a> | <a
-					rel="nofollow" target="_blank" href="//app.jd.com/"> 手机ego </a> | <a
+					rel="nofollow" target="_blank" href="//app.jd.com/"> 手机EGO </a> | <a
 					target="_blank" href="/links.vm/club.jd.com/links.aspx"> 友情链接 </a>
 				| <a target="_blank" href="//media.jd.com/"> 销售联盟 </a> | <a
-					href="//club.jd.com/" target="_blank"> ego社区 </a>
+					href="//club.jd.com/" target="_blank"> EGO社区 </a>
 			</div>
 			<div class="copyright">
-				Copyright &copy; 2004-2017 ego 版权所有
+				Copyright &copy; 2004-2017 EGO 版权所有
 			</div>
 		</div>
 	</center>

@@ -100,7 +100,7 @@
 						var orderItemsWithGoods=list[i].orderItemsWithGoodsList[j];
 						html+="<ul class='item-list'><li class='td td-item'><div class='item-pic'><a  class='J_MakePoint'>";
 						html+=" <img src='${resources}upload/"+orderItemsWithGoods.goodsAll.coverimg+"'	class='itempic J_ItemImg'  name='"+orderItemsWithGoods.goodsAll._id+"'></a></div>";
-						html+="<div class='item-info'><div class='item-basic-info'><a href='#'>";
+						html+="<div class='item-info'><div class='item-basic-info'><a href='${root}/member/goXiangqing?id="+orderItemsWithGoods.goodsAll._id+"'>";
 						html+="<p>"+orderItemsWithGoods.goodsAll.fullname+"</p>";
 						html+="<p class='info-little'>"+orderItemsWithGoods.goodsAll.description+"</p></a></div></div></li>";
 						html+="<li class='td td-price'><div class='item-price'>"+orderItemsWithGoods.price+"</div></li>";
@@ -443,7 +443,7 @@
 																</div>
 																<div class="item-info">
 																	<div class="item-basic-info">
-																		<a href="#">
+																		<a href="${root}/member/goXiangqing?id=${orderItemsWithGoods.goodsAll._id}">
 																			<p>${orderItemsWithGoods.goodsAll.fullname }</p>
 																			<p class="info-little">${orderItemsWithGoods.goodsAll.description }</p>
 																		</a>
@@ -535,7 +535,7 @@
 																</div>
 															</li>
 															<li class="td td-change">
-																<div class="am-btn am-btn-danger anniu">
+																<div class="am-btn am-btn-danger anniu fahuo">
 																	提醒发货</div>
 															</li>
 															
@@ -618,17 +618,17 @@
 			<div class="footer">
 				<div class="footer-hd">
 					<p>
-						<a href="#">ego</a> <b>|</b> <a href="#">商城首页</a> <b>|</b> <a
+						<a href="#">EGO</a> <b>|</b> <a href="#">商城首页</a> <b>|</b> <a
 							href="#">支付宝</a> <b>|</b> <a href="#">物流</a>
 					</p>
 				</div>
 				<div class="footer-bd">
 					<p>
-						<a href="#">关于ego</a> <a href="#">合作伙伴</a> <a href="#">联系我们</a> <a
+						<a href="#">关于EGO</a> <a href="#">合作伙伴</a> <a href="#">联系我们</a> <a
 							href="#">网站地图</a> <em>© 2015-2025 <a
-							href="http://www.ego.com/" target="_blank" title="ego">ego之家</a>
-							- Collect from <a href="http://www.ego.com/" title="ego"
-							target="_blank">ego</a></em>
+							href="http://www.EGO.com/" target="_blank" title="EGO">EGO之家</a>
+							- Collect from <a href="http://www.EGO.com/" title="EGO"
+							target="_blank">EGO</a></em>
 					</p>
 				</div>
 

@@ -463,11 +463,11 @@
 					</div>
 					<div class="footer-bd">
 						<p>
-							<a href="#">关于ego</a>
+							<a href="#">关于EGO</a>
 							<a href="#">合作伙伴</a>
 							<a href="#">联系我们</a>
 							<a href="#">网站地图</a>
-							<em>© 2018-2025 ego.com  <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank"></a></em>
+							<em>© 2018-2025 EGO.com  <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank"></a></em>
 						</p>
 					</div>
 				</div>

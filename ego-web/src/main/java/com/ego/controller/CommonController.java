@@ -191,34 +191,26 @@ public class CommonController {
 						searchGoods.setName(new String(searchGoods.getName().getBytes("iso-8859-1"), "utf-8"));
 					}
 					/* searchGoods.getName().replaceAll("([^,])", "$1|"); */
-					if (searchGoods.getName().length() > 1) {
-						searchGoods.getName().substring(0, searchGoods.getName().length() - 1);
-					}
+				
 				}
 				if (searchGoods.getFullName() != null && !"".equals(searchGoods.getFullName())) {
-				/*	if (request.getMethod().equalsIgnoreCase(SSM.TIJIAOFANGSHI)) {
+					if (request.getMethod().equalsIgnoreCase(SSM.TIJIAOFANGSHI)) {
 						searchGoods.setFullName(new String(searchGoods.getFullName().getBytes("iso-8859-1"), "utf-8"));
-					}*/
-					/* searchGoods.getFullName().replaceAll("([^,])", "$1|"); */
-					if (searchGoods.getFullName().length() > 1) {
-						searchGoods.getFullName().substring(0, searchGoods.getFullName().length() - 1);
 					}
+					/* searchGoods.getFullName().replaceAll("([^,])", "$1|"); */
+					
 				}
 				if (searchGoods.getTypename() != null && !"".equals(searchGoods.getTypename())) {
-					/*if (request.getMethod().equalsIgnoreCase(SSM.TIJIAOFANGSHI)) {
+					if (request.getMethod().equalsIgnoreCase(SSM.TIJIAOFANGSHI)) {
 						searchGoods.setTypename(new String(searchGoods.getTypename().getBytes("iso-8859-1"), "utf-8"));
-					}*/
-					if (searchGoods.getTypename().length() > 1) {
-						searchGoods.getTypename().substring(0, searchGoods.getTypename().length() - 1);
 					}
+					
 				}
 				if (searchGoods.getStorename()!=null && !"".equals(searchGoods.getStorename())) {
 					if (request.getMethod().equalsIgnoreCase(SSM.TIJIAOFANGSHI)) {
 						searchGoods.setStorename(new String(searchGoods.getStorename().getBytes("iso-8859-1"), "utf-8"));
 					}
-					if (searchGoods.getStorename().length()>1) {
-						searchGoods.getStorename().substring(0, searchGoods.getStorename().length()-1);
-					}
+					
 				}
 				
 				if (searchGoods.getCurrentPage() == 0 || "".equals(searchGoods.getCurrentPage())) {
