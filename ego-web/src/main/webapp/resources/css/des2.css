@@ -1,0 +1,57 @@
+#box{
+	width: 400px;
+	height: 400px;
+	background: lightgray;
+	/*margin: 50px 100px;*/
+	position: relative;
+}
+.posi{
+	width: 400px;
+	height: 400px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.move{
+	width: 200px;
+	height: 200px;
+	background: #8C8C8C;
+	opacity:0.4;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+	
+}
+.bigImage{
+	width: 450px;
+	height: 450px;
+	position: absolute;
+	left: 420px;
+	top: 0;
+	overflow: hidden;
+	display: none;	
+	z-index:9999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

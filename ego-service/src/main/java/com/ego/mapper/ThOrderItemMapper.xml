@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ego.mapper.ThOrderItemMapper">
+  <resultMap id="BaseResultMap" type="com.ego.mapper.po.ThOrderItem">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="sn" jdbcType="VARCHAR" property="sn" />
+    <result column="goods" jdbcType="VARCHAR" property="goods" />
+    <result column="num" jdbcType="INTEGER" property="num" />
+    <result column="snorders" jdbcType="VARCHAR" property="snorders" />
+    <result column="yuanyin" jdbcType="VARCHAR" property="yuanyin" />
+    <result column="sum" jdbcType="DECIMAL" property="sum" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="shenhestatus" jdbcType="INTEGER" property="shenhestatus" />
+    <result column="store" jdbcType="INTEGER" property="store" />
+    <result column="user" jdbcType="INTEGER" property="user" />
+    <result column="creadedate" jdbcType="TIMESTAMP" property="creadedate" />
+    <result column="modifidate" jdbcType="TIMESTAMP" property="modifidate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, sn, goods, num, snorders, yuanyin, sum, status, shenhestatus, store, user, creadedate, 
+    modifidate
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from thorderitems
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from thorderitems
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.ego.mapper.po.ThOrderItem">
+    insert into thorderitems (id, sn, goods, 
+      num, snorders, yuanyin, 
+      sum, status, shenhestatus, 
+      store, user, creadedate, 
+      modifidate)
+    values (#{id,jdbcType=INTEGER}, #{sn,jdbcType=VARCHAR}, #{goods,jdbcType=VARCHAR}, 
+      #{num,jdbcType=INTEGER}, #{snorders,jdbcType=VARCHAR}, #{yuanyin,jdbcType=VARCHAR}, 
+      #{sum,jdbcType=DECIMAL}, #{status,jdbcType=INTEGER}, #{shenhestatus,jdbcType=INTEGER}, 
+      #{store,jdbcType=INTEGER}, #{user,jdbcType=INTEGER}, #{creadedate,jdbcType=TIMESTAMP}, 
+      #{modifidate,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ego.mapper.po.ThOrderItem">
+    insert into thorderitems
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="sn != null">
+        sn,
+      </if>
+      <if test="goods != null">
+        goods,
+      </if>
+      <if test="num != null">
+        num,
+      </if>
+      <if test="snorders != null">
+        snorders,
+      </if>
+      <if test="yuanyin != null">
+        yuanyin,
+      </if>
+      <if test="sum != null">
+        sum,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="shenhestatus != null">
+        shenhestatus,
+      </if>
+      <if test="store != null">
+        store,
+      </if>
+      <if test="user != null">
+        user,
+      </if>
+      <if test="creadedate != null">
+        creadedate,
+      </if>
+      <if test="modifidate != null">
+        modifidate,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="sn != null">
+        #{sn,jdbcType=VARCHAR},
+      </if>
+      <if test="goods != null">
+        #{goods,jdbcType=VARCHAR},
+      </if>
+      <if test="num != null">
+        #{num,jdbcType=INTEGER},
+      </if>
+      <if test="snorders != null">
+        #{snorders,jdbcType=VARCHAR},
+      </if>
+      <if test="yuanyin != null">
+        #{yuanyin,jdbcType=VARCHAR},
+      </if>
+      <if test="sum != null">
+        #{sum,jdbcType=DECIMAL},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="shenhestatus != null">
+        #{shenhestatus,jdbcType=INTEGER},
+      </if>
+      <if test="store != null">
+        #{store,jdbcType=INTEGER},
+      </if>
+      <if test="user != null">
+        #{user,jdbcType=INTEGER},
+      </if>
+      <if test="creadedate != null">
+        #{creadedate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifidate != null">
+        #{modifidate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ego.mapper.po.ThOrderItem">
+    update thorderitems
+    <set>
+      <if test="sn != null">
+        sn = #{sn,jdbcType=VARCHAR},
+      </if>
+      <if test="goods != null">
+        goods = #{goods,jdbcType=VARCHAR},
+      </if>
+      <if test="num != null">
+        num = #{num,jdbcType=INTEGER},
+      </if>
+      <if test="snorders != null">
+        snorders = #{snorders,jdbcType=VARCHAR},
+      </if>
+      <if test="yuanyin != null">
+        yuanyin = #{yuanyin,jdbcType=VARCHAR},
+      </if>
+      <if test="sum != null">
+        sum = #{sum,jdbcType=DECIMAL},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="shenhestatus != null">
+        shenhestatus = #{shenhestatus,jdbcType=INTEGER},
+      </if>
+      <if test="store != null">
+        store = #{store,jdbcType=INTEGER},
+      </if>
+      <if test="user != null">
+        user = #{user,jdbcType=INTEGER},
+      </if>
+      <if test="creadedate != null">
+        creadedate = #{creadedate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifidate != null">
+        modifidate = #{modifidate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ego.mapper.po.ThOrderItem">
+    update thorderitems
+    set sn = #{sn,jdbcType=VARCHAR},
+      goods = #{goods,jdbcType=VARCHAR},
+      num = #{num,jdbcType=INTEGER},
+      snorders = #{snorders,jdbcType=VARCHAR},
+      yuanyin = #{yuanyin,jdbcType=VARCHAR},
+      sum = #{sum,jdbcType=DECIMAL},
+      status = #{status,jdbcType=INTEGER},
+      shenhestatus = #{shenhestatus,jdbcType=INTEGER},
+      store = #{store,jdbcType=INTEGER},
+      user = #{user,jdbcType=INTEGER},
+      creadedate = #{creadedate,jdbcType=TIMESTAMP},
+      modifidate = #{modifidate,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

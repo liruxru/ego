@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+	>
+	
+	
+	<!-- 配置解析器 解析properties 就可以隐藏密码 -->
+	<bean class="com.ego.mail.Pro"  p:location="classpath:mail.properties"    p:fileEncoding="utf-8"  />  
+	<!-- 设置QQ邮箱设置的密码是登录密码 -->
+	<bean id="javaMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.qq.com"></property>
+		<property name="username" value="1176881129@qq.com" />
+        	<property name="password" value="${password}" />
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.stmp.auth">true</prop>
+				<prop key="mail.stmp.timeout">3000</prop>
+				<prop key="mail.debug">true</prop>
+			</props>
+		</property>
+	</bean>
+	<!-- 配置解析器 解析properties 就可以隐藏密码  引用一次配置一次，否则会出错 -->
+	<bean class="com.ego.mail.Pro"  p:location="classpath:mail.properties"    p:fileEncoding="utf-8"  />  
+	<!-- 设置网易邮箱设置的密码是授权码 -->
+	<bean id="javaMailSender2" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+	<property name="host" value="smtp.163.com"></property>
+	<property name="username" value="18341893958@163.com" />
+
+       	<property name="password" value="${password}" />
+	<property name="javaMailProperties">
+		<props>
+			<prop key="mail.stmp.auth">true</prop>
+			<prop key="mail.stmp.timeout">3000</prop>
+			<prop key="mail.debug">true</prop>
+		</props>
+	</property>
+	</bean>
+</beans>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ego.mapper.ThOrderMapper" >
+  <resultMap id="BaseResultMap" type="com.ego.mapper.po.ThOrder" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="sn" property="sn" jdbcType="VARCHAR" />
+    <result column="order" property="order" jdbcType="INTEGER" />
+    <result column="store" property="store" jdbcType="INTEGER" />
+    <result column="user" property="user" jdbcType="INTEGER" />
+    <result column="sum" property="sum" jdbcType="INTEGER" />
+    <result column="shenhestatus" property="shenhestatus" jdbcType="INTEGER" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="createdate" property="createdate" jdbcType="TIMESTAMP" />
+    <result column="modifidate" property="modifidate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, sn, order, store, user, sum, shenhestatus, status, createdate, modifidate
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from thorders
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from thorders
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.ego.mapper.po.ThOrder" >
+    insert into thorders (id, sn, order, 
+      store, user, sum, shenhestatus, 
+      status, createdate, modifidate
+      )
+    values (#{id,jdbcType=INTEGER}, #{sn,jdbcType=VARCHAR}, #{order,jdbcType=INTEGER}, 
+      #{store,jdbcType=INTEGER}, #{user,jdbcType=INTEGER}, #{sum,jdbcType=INTEGER}, #{shenhestatus,jdbcType=INTEGER}, 
+      #{status,jdbcType=INTEGER}, #{createdate,jdbcType=TIMESTAMP}, #{modifidate,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.ego.mapper.po.ThOrder" >
+    insert into thorders
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="sn != null" >
+        sn,
+      </if>
+      <if test="order != null" >
+        order,
+      </if>
+      <if test="store != null" >
+        store,
+      </if>
+      <if test="user != null" >
+        user,
+      </if>
+      <if test="sum != null" >
+        sum,
+      </if>
+      <if test="shenhestatus != null" >
+        shenhestatus,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="createdate != null" >
+        createdate,
+      </if>
+      <if test="modifidate != null" >
+        modifidate,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="sn != null" >
+        #{sn,jdbcType=VARCHAR},
+      </if>
+      <if test="order != null" >
+        #{order,jdbcType=INTEGER},
+      </if>
+      <if test="store != null" >
+        #{store,jdbcType=INTEGER},
+      </if>
+      <if test="user != null" >
+        #{user,jdbcType=INTEGER},
+      </if>
+      <if test="sum != null" >
+        #{sum,jdbcType=INTEGER},
+      </if>
+      <if test="shenhestatus != null" >
+        #{shenhestatus,jdbcType=INTEGER},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="createdate != null" >
+        #{createdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifidate != null" >
+        #{modifidate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ego.mapper.po.ThOrder" >
+    update thorders
+    <set >
+      <if test="sn != null" >
+        sn = #{sn,jdbcType=VARCHAR},
+      </if>
+      <if test="order != null" >
+        order = #{order,jdbcType=INTEGER},
+      </if>
+      <if test="store != null" >
+        store = #{store,jdbcType=INTEGER},
+      </if>
+      <if test="user != null" >
+        user = #{user,jdbcType=INTEGER},
+      </if>
+      <if test="sum != null" >
+        sum = #{sum,jdbcType=INTEGER},
+      </if>
+      <if test="shenhestatus != null" >
+        shenhestatus = #{shenhestatus,jdbcType=INTEGER},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="createdate != null" >
+        createdate = #{createdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifidate != null" >
+        modifidate = #{modifidate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ego.mapper.po.ThOrder" >
+    update thorders
+    set sn = #{sn,jdbcType=VARCHAR},
+      order = #{order,jdbcType=INTEGER},
+      store = #{store,jdbcType=INTEGER},
+      user = #{user,jdbcType=INTEGER},
+      sum = #{sum,jdbcType=INTEGER},
+      shenhestatus = #{shenhestatus,jdbcType=INTEGER},
+      status = #{status,jdbcType=INTEGER},
+      createdate = #{createdate,jdbcType=TIMESTAMP},
+      modifidate = #{modifidate,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" 
+         id="WebApp_ID" version="3.0">
+           <display-name>ego-web</display-name>
+  	<!-- 配置Spring监听 -->
+	<listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <!-- 防止spring内存溢出监听器 -->
+	<listener>
+		<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+	</listener>
+  <!-- Spring配置文件位置 -->
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:applicationContext.xml</param-value>
+  </context-param>
+ <!--  配置全局请求响应编码 -->
+  <filter>
+    <filter-name>characterEncodingFilter</filter-name>
+    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+    <init-param>
+      <param-name>forceEncoding</param-name>
+      <param-value>true</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>characterEncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <!-- spring mvc 核心DispatcherServlet -->
+  <servlet>
+    <servlet-name>springmvc</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath*:/applicationContext-mvc.xml</param-value>
+    </init-param>
+ 	<!-- 当值为0或者大于0时，表示容器在应用启动时就加载这个servlet；
+   	 当是一个负数时或者没有指定时，则指示容器在该servlet被选择时才加载。
+         正数的值越小，启动该servlet的优先级越高。 -->
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>springmvc</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+	<!--   配置首页 -->
+	  	<welcome-file-list>
+		<welcome-file>/index.jsp</welcome-file>
+	</welcome-file-list>
+	<!--   配置404 500 -->
+	<error-page>
+		<error-code>404</error-code>
+		<location>/open/404.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/open/404.jsp</location>
+	</error-page>
+	<!-- 配置session超时时间，单位分钟 -->
+	<session-config>
+		<session-timeout>900</session-timeout>
+	</session-config>
+	<!-- 连接池 启用 Web 监控统计功能    start-->  
+      <filter>  
+         <filter-name>DruidWebStatFilter</filter-name>  
+         <filter-class>com.alibaba.druid.support.http.WebStatFilter</filter-class>  
+         <init-param>  
+             <param-name>exclusions</param-name>  
+             <param-value> *. js ,*. gif ,*. jpg ,*. png ,*. css ,*. ico ,/ druid /* </param-value>  
+         </init-param>  
+      </filter>  
+      <filter-mapping>  
+         <filter-name>DruidWebStatFilter</filter-name>  
+         <url-pattern>/*</url-pattern>  
+      </filter-mapping>  
+      <servlet >  
+         <servlet-name>DruidStatView</servlet-name>  
+         <servlet-class>com.alibaba.druid.support.http.StatViewServlet</servlet-class>  
+      </servlet>  
+      <servlet-mapping>  
+         <servlet-name>DruidStatView</servlet-name>  
+         <url-pattern>/druid/*</url-pattern >  
+      </servlet-mapping >  
+      <!-- 连接池 启用 Web 监控统计功能  访问监控页面： http://ip:port/projectName/druid/index.html   end-->
+</web-app>

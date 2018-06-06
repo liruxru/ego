@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo" 
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd 
+       http://code.alibabatech.com/schema/dubbo 
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    
+    <dubbo:application name="dubbo-manager-1"/>
+    <dubbo:registry address="N/A"/>
+     <dubbo:reference id="adminService" interface="com.ego.service.AdminService" url="dubbo://127.0.0.1:30220" check="false" timeout="600000"/>
+     <dubbo:reference id="goodsService" interface="com.ego.service.GoodsService" url="dubbo://127.0.0.1:30220" check="false" timeout="600000"/>
+     <dubbo:reference id="typeService" interface="com.ego.service.TypeService" url="dubbo://127.0.0.1:30220" check="false" timeout="600000"/>
+     <dubbo:reference id="storeService" interface="com.ego.service.StoreService" url="dubbo://127.0.0.1:30220" check="false" timeout="600000"/>
+     <dubbo:reference id="orderService" interface="com.ego.service.OrderService" url="dubbo://127.0.0.1:30220" check="false" timeout="600000"/>
+     <dubbo:reference id="adminMessageService" interface="com.ego.service.AdminMessageService" url="dubbo://127.0.0.1:30220" check="false" timeout="600000"/>
+     <dubbo:reference id="collectGoodsService" interface="com.ego.service.CollectGoodsService" url="dubbo://127.0.0.1:30220" check="false" timeout="600000"/>
+     <dubbo:reference id="pingJiaService" interface="com.ego.service.PingJiaService" url="dubbo://127.0.0.1:30220" check="false" timeout="600000"/>
+     <dubbo:reference id="userService" interface="com.ego.service.UserService" url="dubbo://127.0.0.1:30220" check="false" timeout="600000"/>
+      <dubbo:reference id="thOrderItemService" interface="com.ego.service.ThOrderItemService" url="dubbo://127.0.0.1:30220" check="false" timeout="600000"/>
+</beans>

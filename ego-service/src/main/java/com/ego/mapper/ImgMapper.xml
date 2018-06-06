@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ego.mapper.ImgMapper" >
+  <resultMap id="BaseResultMap" type="com.ego.mapper.po.Img" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="uuidname" property="uuidname" jdbcType="VARCHAR" />
+    <result column="filename" property="filename" jdbcType="VARCHAR" />
+    <result column="goods" property="goods" jdbcType="VARCHAR" />
+    <result column="stores" property="stores" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, uuidname, filename, goods, stores
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from imgs
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from imgs
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.ego.mapper.po.Img" >
+    insert into imgs (id, uuidname, filename, 
+      goods, stores)
+    values (#{id,jdbcType=INTEGER}, #{uuidname,jdbcType=VARCHAR}, #{filename,jdbcType=VARCHAR}, 
+      #{goods,jdbcType=VARCHAR}, #{stores,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ego.mapper.po.Img" >
+    insert into imgs
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="uuidname != null" >
+        uuidname,
+      </if>
+      <if test="filename != null" >
+        filename,
+      </if>
+      <if test="goods != null" >
+        goods,
+      </if>
+      <if test="stores != null" >
+        stores,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="uuidname != null" >
+        #{uuidname,jdbcType=VARCHAR},
+      </if>
+      <if test="filename != null" >
+        #{filename,jdbcType=VARCHAR},
+      </if>
+      <if test="goods != null" >
+        #{goods,jdbcType=VARCHAR},
+      </if>
+      <if test="stores != null" >
+        #{stores,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ego.mapper.po.Img" >
+    update imgs
+    <set >
+      <if test="uuidname != null" >
+        uuidname = #{uuidname,jdbcType=VARCHAR},
+      </if>
+      <if test="filename != null" >
+        filename = #{filename,jdbcType=VARCHAR},
+      </if>
+      <if test="goods != null" >
+        goods = #{goods,jdbcType=VARCHAR},
+      </if>
+      <if test="stores != null" >
+        stores = #{stores,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ego.mapper.po.Img" >
+    update imgs
+    set uuidname = #{uuidname,jdbcType=VARCHAR},
+      filename = #{filename,jdbcType=VARCHAR},
+      goods = #{goods,jdbcType=VARCHAR},
+      stores = #{stores,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,76 @@
+* {
+	margin: 0;
+	padding: 0;
+  }
+			
+			
+			
+			.box {
+				position: relative;
+				width: 654px;
+				height: 500px;
+				text-align: center;
+				margin: 60px 0 0 378px;
+				/*background-color: #FFFFFF;*/
+			}
+			#logo{
+				position: relative;
+				width: 370px;
+				height: 80px;
+				margin-left:160px;
+				text-align: center;
+			}
+			#logo img{
+				position: relative;
+				width: 370px;
+				height: 80px;
+			}
+			#content_box{
+				position: relative;
+				width: 654px;
+				height: 380px;
+				margin-top: 70px;
+			/*	background: url(img/bg01.png);*/
+			}
+			#login{
+				position: relative;
+				width: 654px;
+				height: 375px;
+				background: rgba(0,0,0,0.5);
+				border-radius: 10px;
+				font-family: "微软雅黑";				
+				top: 0px;/*init 50px*/
+			}
+			.titile{
+				font-size: 30px;
+				font-weight: bold;
+				color: #fff;
+				text-align: center;
+				margin-top: 30px;
+				margin-bottom: 30px;
+				cursor: pointer;
+			}
+			#login input.txt{
+				width: 420px;
+				height: 60px;
+				color: #fff;
+				border-radius: 6px;
+				background: rgba(45,45,45,0.15);
+				margin-bottom: 15px;
+				border: 1px solid rgba(255,255,255,0.15);
+				box-shadow: 0 2px 3px rgba(0,0,0,0.1) inset;
+				text-align: center;
+			}
+			#login input.but{
+				width: 412px;
+				height: 50px;
+				background: #ef4300;
+				border: 0;
+				border-radius: 6px;
+				box-shadow: 0 15px 30px rgba(255,255,255,0.25) inset;
+				color: #fff;
+				font-size: 20px;
+			}
+			#login input:focus{
+				outline: none;
+			}

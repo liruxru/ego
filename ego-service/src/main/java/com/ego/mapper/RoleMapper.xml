@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ego.mapper.RoleMapper" >
+  <resultMap id="BaseResultMap" type="com.ego.mapper.po.Role" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="rolename" property="rolename" jdbcType="VARCHAR" />
+    <result column="descripation" property="descripation" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, rolename, descripation
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from roles
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from roles
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.ego.mapper.po.Role" >
+    insert into roles (id, rolename, descripation
+      )
+    values (#{id,jdbcType=INTEGER}, #{rolename,jdbcType=VARCHAR}, #{descripation,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.ego.mapper.po.Role" >
+    insert into roles
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="rolename != null" >
+        rolename,
+      </if>
+      <if test="descripation != null" >
+        descripation,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="rolename != null" >
+        #{rolename,jdbcType=VARCHAR},
+      </if>
+      <if test="descripation != null" >
+        #{descripation,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ego.mapper.po.Role" >
+    update roles
+    <set >
+      <if test="rolename != null" >
+        rolename = #{rolename,jdbcType=VARCHAR},
+      </if>
+      <if test="descripation != null" >
+        descripation = #{descripation,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ego.mapper.po.Role" >
+    update roles
+    set rolename = #{rolename,jdbcType=VARCHAR},
+      descripation = #{descripation,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+ 
+  <insert id="insertBackId"  parameterType="com.ego.mapper.po.Role">
+  <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
+   SELECT LAST_INSERT_ID()
+   
+  </selectKey>
+ 	insert into roles values(null, #{rolename}, #{descripation})
+  </insert>
+   <insert id="insertRole_per" >
+ 	insert into roles_pers values 
+ 	 <foreach collection="perIds" item="per" index="index" separator="," >  
+        (#{roleId},#{per})  
+    </foreach>  
+ 
+  </insert>
+  
+</mapper>

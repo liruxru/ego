@@ -1,0 +1,220 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.bonc</groupId>
+  <artifactId>ego-pom</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+   <properties>
+  	<!-- 要让整个项目统一字符集编码，就需要设定<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- 让spring统一版本号，可以设置这么个变量 -->
+		<spring.version>4.1.1.RELEASE</spring.version>
+	</properties>
+
+	<dependencies>
+
+		<!-- JUnit是一个Java语言的单元测试框架 -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- spring begin -->
+		<!-- spring-jdbc.jar这个jar 文件包含对Spring 对JDBC 数据访问进行封装的所有类。
+		外部依赖spring-beans，spring-dao。 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- spring-context 的扩展支持，用于 mvc 方面 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!--这个jar 文件为Spring 核心提供了大量扩展。
+		可以找到使用Spring ApplicationContext特性时所需的全部类，JDNI 所需的全部类，
+		instrumentation组件以及校验Validation 方面的相关类。
+		外部依赖spring-beans, (spring-aop)。 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		
+		<!-- spring-aop.jar
+		这个jar 文件包含在应用中使用Spring 的AOP 特性时所需的类和源码级元数据支持。
+		使用基于AOP 的Spring特性，如声明型事务管理（Declarative Transaction Management），也要在应用里包含这个jar包。
+		外部依赖spring-core， (spring-beans，AOP Alliance， CGLIB，Commons Attributes)。 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- spring-core.jar
+		这个jar 文件包含Spring 框架基本的核心工具类。
+		Spring 其它组件要都要使用到这个包里的类，是其它组件的基本核心，当然你也可以在自己的应用系统中使用这些工具类。
+		外部依赖Commons Logging， (Log4J)。 -->
+	<!-- 	<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency> -->
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.5.4</version>
+		</dependency>
+
+			<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.3.1</version>
+		</dependency>
+
+
+
+
+		<!-- dbcp -->
+		<!-- <dependency> <groupId>commons-dbcp</groupId> <artifactId>commons-dbcp</artifactId> 
+			<version>1.4</version> </dependency> <dependency> <groupId>org.apache.commons</groupId> 
+			<artifactId>commons-pool2</artifactId> <version>2.2</version> </dependency> -->
+
+		<!-- c3p0 -->
+		<!-- <dependency>
+			<groupId>com.mchange</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>0.9.5-pre8</version>
+		</dependency> -->
+		
+		<!--阿里连接池 -->
+		<dependency>
+		    <groupId>com.alibaba</groupId>
+		    <artifactId>druid</artifactId>
+		    <version>1.0.11</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.mchange</groupId>
+			<artifactId>mchange-commons-java</artifactId>
+			<version>0.2.12</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.20</version>
+		</dependency>
+		
+		
+		<!-- Ehcache是一种广泛使用的开源Java分布式缓存。 -->
+		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache</artifactId>
+			<version>2.10.3</version>
+		</dependency>
+	</dependencies>
+	
+	<build>
+	<pluginManagement>
+		<plugins>
+			    <plugin>  
+			    <!-- 资源配置插件： 这些插件有时候即便是不配置，它也是默认存在的！  -->
+			        <groupId>org.apache.maven.plugins</groupId>  
+			        <artifactId>maven-resources-plugin</artifactId>  
+			        <version>2.4.3</version>  
+			        <configuration> 
+			        <!-- 虽然<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>默认可以识别，但是我还是觉得不放心。  -->
+			            <encoding>${project.build.sourceEncoding}</encoding>  
+			        </configuration>  
+    			</plugin> 
+    			<!-- 这个插件就是个默认配置，不过我还是谨慎的配置了jdk编译版本跟字符集设置： 
+    			 <source>1.6</source>：源代码编译版本;
+				<target>1.6</target>：目标平台编译版本;
+				<encoding>${project.build.sourceEncoding}</encoding>：字符集编码。  -->
+    			<plugin>  
+			    <groupId>org.apache.maven.plugins</groupId>  
+			    <artifactId>maven-compiler-plugin</artifactId>  
+			     <version>3.1</version>  
+			    <configuration>  
+			        <source>1.8</source>  
+			        <target>1.8</target>  
+			        <encoding>${project.build.sourceEncoding}</encoding>  
+			    </configuration>  
+				</plugin>  
+				<!-- 解决maven test命令时console出现中文乱码乱码 -->
+				<!-- <parallel>methods</parallel>：方法级并发；
+				<threadCount>10</threadCount>：是线程数，当前是10；
+				<argLine>-Dfile.encoding=UTF-8</argLine>：
+				就是参数命令行，这一行很关键。测试插件有个小问题，它不依赖项目的字符集设置，
+				它依赖于操作系统。如果你用命令行操作，看中文提示测试结果还好。
+				但在win+eclipse（UTF-8设置）下，那就是乱码了；
+				<skip>true</skip>是忽略测试；
+				<testFailureIgnore>true</testFailureIgnore>：忽略测试异常； --> 
+			    <plugin>  
+			        <groupId>org.apache.maven.plugins</groupId>  
+			        <artifactId>maven-surefire-plugin</artifactId>  
+			        <version>2.7.2</version>  
+			        <configuration>  
+			            <parallel>methods</parallel>  
+			            <threadCount>10</threadCount>  
+			           <!-- 解决maven test命令时console出现中文乱码乱码  -->
+			            <argLine>-Dfile.encoding=UTF-8</argLine>  
+			            <!-- <skip>true</skip> -->  
+			            <!-- <testFailureIgnore>true</testFailureIgnore> -->  
+			        </configuration>  
+		   		</plugin> 
+		   		<!-- 要测试，就要有报告，知晓测试覆盖率，这就需要clover：   -->
+		   		<!-- 安全起见，我还是要强制写遍字符集编码设置：
+		   		<encoding>${project.build.sourceEncoding}</encoding>
+				可以使用 mvn cobertura:cobertura 产生测试覆盖率报告！  -->
+	   		    <plugin>  
+		        <groupId>maven</groupId>  
+		        <artifactId>maven-clover-plugin</artifactId>  
+		        <version>2.4.2</version>  
+		        <configuration>  
+		            <encoding>${project.build.sourceEncoding}</encoding>  
+		        </configuration>  
+		   		 </plugin>  
+		   		<!--  在eclipse下进行maven项目开发，还是需要eclipse相应的插件： -->
+		   		<!-- <wtpmanifest>true</wtpmanifest>：产生manifest文件
+				<wtpapplicationxml>true</wtpapplicationxml>：产生web.xml文件
+				<wtpversion>2.0</wtpversion>：这是eclipse里面的wtp版本
+				<downloadSources>true</downloadSources>：下载源代码
+				<downloadJavadocs>true</downloadJavadocs>：下载源码文档  -->
+		   		    <plugin>  
+				        <groupId>org.apache.maven.plugins</groupId>  
+				        <artifactId>maven-eclipse-plugin</artifactId>  
+				        <version>2.8</version>  
+				        <configuration>  
+				            <wtpmanifest>true</wtpmanifest>  
+				            <wtpapplicationxml>true</wtpapplicationxml>  
+				            <wtpversion>2.0</wtpversion>  
+				            <downloadSources>true</downloadSources>  
+				            <downloadJavadocs>true</downloadJavadocs>  
+				        </configuration>  
+				    </plugin>  
+		</plugins>
+	</pluginManagement>
+	
+	
+		
+	</build> 
+	
+</project>

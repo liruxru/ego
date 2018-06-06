@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ego.mapper.CartMapper" >
+  <resultMap id="BaseResultMap" type="com.ego.mapper.po.Cart" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="user" property="user" jdbcType="INTEGER" />
+    <result column="goods" property="goods" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="DECIMAL" />
+    <result column="num" property="num" jdbcType="INTEGER" />
+    <result column="coverImg" property="coverimg" jdbcType="VARCHAR" />
+    <result column="goodName" property="goodname" jdbcType="VARCHAR" />
+    <result column="createdate" property="createdate" jdbcType="TIMESTAMP" />
+    <result column="modifidate" property="modifidate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, user, goods, price, num, coverImg, goodName, createdate, modifidate
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from cart
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from cart
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.ego.mapper.po.Cart" >
+   <selectKey resultType="java.lang.Integer" order="AFTER" keyProperty="id">
+   SELECT LAST_INSERT_ID()
+  </selectKey>
+    insert into cart (id, user, goods, 
+      price, num, coverImg, 
+      goodName, createdate, modifidate
+      )
+    values (#{id,jdbcType=INTEGER}, #{user,jdbcType=INTEGER}, #{goods,jdbcType=VARCHAR}, 
+      #{price,jdbcType=DECIMAL}, #{num,jdbcType=INTEGER}, #{coverimg,jdbcType=VARCHAR}, 
+      #{goodname,jdbcType=VARCHAR}, #{createdate,jdbcType=TIMESTAMP}, #{modifidate,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.ego.mapper.po.Cart" >
+    insert into cart
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="user != null" >
+        user,
+      </if>
+      <if test="goods != null" >
+        goods,
+      </if>
+      <if test="price != null" >
+        price,
+      </if>
+      <if test="num != null" >
+        num,
+      </if>
+      <if test="coverimg != null" >
+        coverImg,
+      </if>
+      <if test="goodname != null" >
+        goodName,
+      </if>
+      <if test="createdate != null" >
+        createdate,
+      </if>
+      <if test="modifidate != null" >
+        modifidate,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="user != null" >
+        #{user,jdbcType=INTEGER},
+      </if>
+      <if test="goods != null" >
+        #{goods,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        #{price,jdbcType=DECIMAL},
+      </if>
+      <if test="num != null" >
+        #{num,jdbcType=INTEGER},
+      </if>
+      <if test="coverimg != null" >
+        #{coverimg,jdbcType=VARCHAR},
+      </if>
+      <if test="goodname != null" >
+        #{goodname,jdbcType=VARCHAR},
+      </if>
+      <if test="createdate != null" >
+        #{createdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifidate != null" >
+        #{modifidate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ego.mapper.po.Cart" >
+    update cart
+    <set >
+      <if test="user != null" >
+        user = #{user,jdbcType=INTEGER},
+      </if>
+      <if test="goods != null" >
+        goods = #{goods,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        price = #{price,jdbcType=DECIMAL},
+      </if>
+      <if test="num != null" >
+        num = #{num,jdbcType=INTEGER},
+      </if>
+      <if test="coverimg != null" >
+        coverImg = #{coverimg,jdbcType=VARCHAR},
+      </if>
+      <if test="goodname != null" >
+        goodName = #{goodname,jdbcType=VARCHAR},
+      </if>
+      <if test="createdate != null" >
+        createdate = #{createdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifidate != null" >
+        modifidate = #{modifidate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ego.mapper.po.Cart" >
+    update cart
+    set user = #{user,jdbcType=INTEGER},
+      goods = #{goods,jdbcType=VARCHAR},
+      price = #{price,jdbcType=DECIMAL},
+      num = #{num,jdbcType=INTEGER},
+      coverImg = #{coverimg,jdbcType=VARCHAR},
+      goodName = #{goodname,jdbcType=VARCHAR},
+      createdate = #{createdate,jdbcType=TIMESTAMP},
+      modifidate = #{modifidate,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  <delete id="deleteByCartIds"  parameterType="java.lang.Integer"  >
+  	delete from cart where id in 
+  	<foreach item="cartId" collection="array" open="(" close=")" separator=",">
+  		#{cartId}
+  	</foreach>
+  
+  </delete>
+  <select id="selectByCartIds"  parameterType="java.lang.Integer" resultType="com.ego.mapper.po.Cart" >
+  	select * from cart where id in
+  	<foreach collection="array" item="cartId" separator=","  open="(" close=")" >
+  		#{cartId}
+  	</foreach>
+  
+  </select>
+  
+  
+</mapper>

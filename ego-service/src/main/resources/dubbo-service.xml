@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xmlns:repository="http://www.springframework.org/schema/data/repository"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+		http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+		http://www.springframework.org/schema/data/repository http://www.springframework.org/schema/data/repository/spring-repository-1.11.xsd">
+	<dubbo:application name="dubbo-service" />
+	<dubbo:registry address="N/A" />
+	<dubbo:protocol name="dubbo" port="30220" threadpool="fixed" threads="50" />
+	<dubbo:service ref="adminService" interface="com.ego.service.AdminService"></dubbo:service>
+	<dubbo:service ref="userService" interface="com.ego.service.UserService"></dubbo:service>
+	<dubbo:service ref="liuYanService" interface="com.ego.service.LiuYanService"></dubbo:service>
+	<dubbo:service ref="liuLanService" interface="com.ego.service.LiuLanService"></dubbo:service>
+	<dubbo:service ref="goodsService" interface="com.ego.service.GoodsService"></dubbo:service>
+	<dubbo:service ref="thOrderItemService" interface="com.ego.service.ThOrderItemService"></dubbo:service>
+	<dubbo:service ref="cartService" interface="com.ego.service.CartService"></dubbo:service>
+	<dubbo:service ref="orderService" interface="com.ego.service.OrderService"></dubbo:service>
+	<dubbo:service ref="areaService" interface="com.ego.service.AreaService"></dubbo:service>
+	<dubbo:service ref="cityService" interface="com.ego.service.CityService"></dubbo:service>
+	<dubbo:service ref="provinceService" interface="com.ego.service.ProvinceService"></dubbo:service>
+	<dubbo:service ref="orderItemsService" interface="com.ego.service.OrderItemsService"></dubbo:service>
+	<dubbo:service ref="typeService" interface="com.ego.service.TypeService"></dubbo:service>
+	<dubbo:service ref="storeService" interface="com.ego.service.StoreService"></dubbo:service>
+	<dubbo:service ref="permissiomService" interface="com.ego.service.PermissiomService"></dubbo:service>
+	<dubbo:service ref="roleService" interface="com.ego.service.RoleService"></dubbo:service>
+	<dubbo:service ref="collectGoodsService" interface="com.ego.service.CollectGoodsService"></dubbo:service>
+	<dubbo:service ref="pingJiaService" interface="com.ego.service.PingJiaService"></dubbo:service>
+    <dubbo:service ref="adminMessageService" interface="com.ego.service.AdminMessageService"></dubbo:service>
+    <dubbo:service ref="statusService" interface="com.ego.service.StatusService"></dubbo:service>
+</beans>

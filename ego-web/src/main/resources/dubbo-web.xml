@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd 
+       http://code.alibabatech.com/schema/dubbo 
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+   <dubbo:application name="dubbo-web-1"/>
+    <dubbo:registry address="N/A"/>
+    <dubbo:reference id="adminService" interface="com.ego.service.AdminService" url="dubbo://127.0.0.1:30220" check="false" timeout="600000"/>
+   	<dubbo:reference id="goodsService" interface="com.ego.service.GoodsService" url="dubbo://127.0.0.1:30220" check="false" timeout="600000"/>
+	<dubbo:reference id="cartService" interface="com.ego.service.CartService" url="dubbo://127.0.0.1:30220" check="false" timeout="600000"/>
+	<dubbo:reference id="userService" interface="com.ego.service.UserService" url="dubbo://127.0.0.1:30220" check="false" timeout="600000"/>
+	<dubbo:reference id="provinceService" interface="com.ego.service.ProvinceService" url="dubbo://127.0.0.1:30220" check="false" timeout="600000"/>
+	<dubbo:reference id="cityService" interface="com.ego.service.CityService" url="dubbo://127.0.0.1:30220" check="false" timeout="600000"/>
+	<dubbo:reference id="areaService" interface="com.ego.service.AreaService" url="dubbo://127.0.0.1:30220" check="false" timeout="600000"/>
+	<dubbo:reference id="orderService" interface="com.ego.service.OrderService" url="dubbo://127.0.0.1:30220" check="false" timeout="600000"/>
+	<dubbo:reference id="storeService" interface="com.ego.service.StoreService" url="dubbo://127.0.0.1:30220" check="false" timeout="600000"/>
+	<dubbo:reference id="typeService" interface="com.ego.service.TypeService" url="dubbo://127.0.0.1:30220" check="false" timeout="600000"/>
+	<dubbo:reference id="collectGoodsService" interface="com.ego.service.CollectGoodsService" url="dubbo://127.0.0.1:30220" check="false" timeout="600000"/>
+	<dubbo:reference id="pingJiaService" interface="com.ego.service.PingJiaService" url="dubbo://127.0.0.1:30220" check="false" timeout="600000"/>
+	<dubbo:reference id="liuLanService" interface="com.ego.service.LiuLanService" url="dubbo://127.0.0.1:30220" check="false" timeout="600000" />
+	<dubbo:reference id="statusService" interface="com.ego.service.StatusService" url="dubbo://127.0.0.1:30220" check="false" timeout="600000" />
+	<dubbo:reference id="thOrderItemService" interface="com.ego.service.ThOrderItemService" url="dubbo://127.0.0.1:30220" check="false" timeout="600000" />
+
+</beans>

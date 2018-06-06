@@ -1,0 +1,58 @@
+*{margin: 0px auto;	padding: 0px; font:Microsoft YaHei,Hiragino Sans GB;}
+#header{width: 100%;height: 33px;background: url(../img/cart/head.png);line-height: 33px;}
+#word{width: 1024px; }
+ul li{float:left;list-style: none; font-size: 12px;color: #b7A299;}
+ul li a{color: #b7A299;text-decoration: none; }
+li a:hover{color: #f30213;}
+.fr li{margin-left: 25px;}
+.store{margin-top: 20px;width: 100%;}
+.storeCart{margin-top:10px;border-style: solid;border-width: 2px 1px 1px;border-color: #aaa #f1f1f1 #f1f1f1;background: #fff; position: relative;}
+.cartItem{width: 100%;height:120px;margin-top: 15px;border-bottom: solid 1px blanchedalmond;}			
+#homeImg{z-index:99;width: 21px;height: 21px;background: url(../img/cart/home.jpg); z-index: 99;float: left;margin-top: 5px;}
+.fr{float: right;width: 260px;}
+#logoAndsearch{width: 1024px;height: 97px;margin-top: 10px;}			
+#search{float: right;background:#c91623; width:330px;height: 28px;margin-top: 30px;}
+#form{width:322px ;height:26px ;margin-left: 1px;margin-top:1px;}
+#input{width:258px;height: 26px;line-height:18px;}
+#searchBtn{  background:#c91623 ; width:48px;height: 26px;font-weight: 700;color:#fff ;text-align: center;border: 0;float: right;cursor: pointer;margin-right:2px;}
+#container{width: 1024px;font-size: 12px;}
+.cart-filter-bar{width: 100%;height: 37px;margin-top: 10px;}
+#listCart{color:#e4393c; font-weight: 700; font-size: 16px; line-height: 26px; cursor: pointer;float: left;margin-top: 11px;}
+#userAddress{font-size:12px ;float: right;}
+#cartTableHead{background: url(../img/cart/tableHead.png) ;width: 100%;height: 42px;font-size: 12px;}
+#cartTableHead div{float: left;height: 32px;line-height: 32px;margin-top: 5px;}
+.checkAll{margin-left: 10px;width:120px;}
+.chkAll{vertical-align: middle;}
+.t-goods{width:240px ;}
+.t-props{width:134px ;}
+.t-price{width:130px ;}
+.t-quantity{width:130px ;}
+.t-sum{width:130px ;}
+.t-action{width:130px ;}
+
+.cartItem{width: 100%;height:120px;margin-top: 15px;border-bottom: solid 1px blanchedalmond;position: relative;}			
+.chck{position: absolute;left: 10px;width: 30px; }
+.td-goods{position: absolute;left:90px ; }
+.td-props{position: absolute;left:370px;}
+.td-price{position: absolute;left:504px;}
+.td-quantity{position: absolute;left:605px;}
+.td-sum{position: absolute;left:758px;}
+.td-action{position: absolute;left:894px;}
+.goodImg{width:100px;height:100px;border: 1px solid #eee; float: left;}
+.goodDesc{width:140px;height: 100px; background: white;float: left;}
+.subDiv,.addDiv{border: 1px solid #cacbcb;height: 20px;width: 18px; padding: 1px;float: left;text-align: center;}
+.changeNumDiv{float: left;}
+.subNum,.addNum{ height: 20px;width: 18px; color: #b7A299; line-height: 20px;text-decoration: none;font-size: 20px;}
+.changeNum{width: 46px;height: 24px;text-align: center;line-height: 20px;padding: 1px; }
+#cart-floatbar{position: fixed;bottom: 0px; z-index: 999; width: 1024px; height: 52px;background: #fff;border :1px 0; }
+.operation a{text-decoration: none; color: #666;}
+.remove-batch:hover{color: #e4393c;}
+.select-all{float: left; line-height: 52px;}
+.operation{float: left; margin-left: 20px; line-height: 52px;}
+.submit_Btn{float: right;background:#c91623 ;width: 96px;height: 52px;text-align: center;line-height: 52px;color: white;font-size: 18px;font-family: "Microsoft YaHei";text-decoration: none;}
+.comm-right{width: 650px;height: 52px;float: right;}
+.comm-right div{float: right;}
+.price-sum{margin-right: 30px;height: 52px;line-height: 20px;}
+.amount-sum{margin-right: 30px;}
+.amount-sum em,.sumPrice em{	color: #e4393c;font-family: verdana;font-weight: 700;margin: 0 3px;	font-size: 15px;}
+#place{height:60px;}
