@@ -1,0 +1,106 @@
+{
+	"_class" : "com.ego.document.GoodsCollect",
+	"_id" : ObjectId("5a69449845ae7116d0e5ac59"),
+	"countPeopleNum" : NumberLong("2"),
+	"goodsId" : "5a65d7f509bd9904b48fd232",
+	"userIds" : [
+		NumberInt("18"),
+		NumberInt("18")
+	]
+},
+{
+	"_class" : "com.ego.document.GoodsCollect",
+	"_id" : ObjectId("5a6686314d68ec15c433d5fe"),
+	"countPeopleNum" : NumberLong("3"),
+	"goodsId" : "5a6599cc34e94c14585b4e59",
+	"userIds" : [
+		NumberInt("1"),
+		NumberInt("1"),
+		NumberInt("18")
+	]
+},
+{
+	"_class" : "com.ego.document.GoodsCollect",
+	"_id" : ObjectId("5a6a9a6245ae71078007c6f0"),
+	"countPeopleNum" : NumberLong("2"),
+	"goodsId" : "5a65ee5c09bd992928d4a646",
+	"userIds" : [
+		NumberInt("18"),
+		NumberInt("18")
+	]
+},
+{
+	"_class" : "com.ego.document.GoodsCollect",
+	"_id" : ObjectId("5a62a6d04d68ec114c539814"),
+	"countPeopleNum" : NumberLong("-15"),
+	"goodsId" : "5a5f1b2bbfa93a10802453c9",
+	"userIds" : [
+		NumberInt("12"),
+		NumberInt("13")
+	]
+},
+{
+	"_class" : "com.ego.document.GoodsCollect",
+	"_id" : ObjectId("5a6686464d68ec16f8bd6cb3"),
+	"countPeopleNum" : NumberLong("3"),
+	"goodsId" : "5a6599e234e94c1bb43ca8e8",
+	"userIds" : [
+		NumberInt("1"),
+		NumberInt("1"),
+		NumberInt("18")
+	]
+},
+{
+	"_class" : "com.ego.document.GoodsCollect",
+	"_id" : ObjectId("5a68387345ae71195806fc4e"),
+	"countPeopleNum" : NumberLong("1"),
+	"goodsId" : "5a65d55f09bd9904b48fd231",
+	"userIds" : [
+		NumberInt("18")
+	]
+},
+{
+	"_class" : "com.ego.document.GoodsCollect",
+	"_id" : ObjectId("5a6838de45ae71195806fc4f"),
+	"countPeopleNum" : NumberLong("1"),
+	"goodsId" : "5a6599ba34e94c1a5050696d",
+	"userIds" : [
+		NumberInt("18")
+	]
+},
+{
+	"_class" : "com.ego.document.GoodsCollect",
+	"_id" : ObjectId("5a6685f04d68ec0a5c0968c7"),
+	"countPeopleNum" : NumberLong("2"),
+	"goodsId" : "5a65994934e94c2094386414",
+	"userIds" : [
+		NumberInt("1"),
+		NumberInt("1")
+	]
+},
+{
+	"_class" : "com.ego.document.GoodsCollect",
+	"_id" : ObjectId("5a6ed86445ae710f8839e598"),
+	"countPeopleNum" : NumberLong("1"),
+	"goodsId" : "5a65ca8509bd990930ec0b05",
+	"userIds" : [
+		NumberInt("18")
+	]
+},
+{
+	"_class" : "com.ego.document.GoodsCollect",
+	"_id" : ObjectId("5a6686174d68ec14acd3591f"),
+	"countPeopleNum" : NumberLong("2"),
+	"goodsId" : "5a6599ac34e94c00c440b1c7",
+	"userIds" : [
+		NumberInt("1"),
+		NumberInt("1")
+	]
+},
+{
+	"_class" : "com.ego.document.GoodsCollect",
+	"_id" : ObjectId("5a6ee61145ae710edc587063"),
+	"countPeopleNum" : NumberLong("-6"),
+	"goodsId" : "",
+	"userIds" : [ ]
+},
